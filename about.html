@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="關於旅圖誌：網站介紹、資料來源說明、常見問題，以及可即時驗證的聯絡表單。">
+  <title>關於本站｜旅圖誌 Travel Atlas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== 頁首：標誌與主導覽列 ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">旅</span>
+        <span class="logo-text">旅圖誌<span class="logo-sub">TRAVEL ATLAS</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="開啟或收起主導覽列">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="主導覽列">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">首頁</a></li>
+          <li><a class="nav-link" href="destinations.html">目的地</a></li>
+          <li><a class="nav-link" href="kyoto.html">京都</a></li>
+          <li><a class="nav-link" href="rome.html">羅馬</a></li>
+          <li><a class="nav-link" href="cairo.html">開羅</a></li>
+          <li><a class="nav-link" href="cusco.html">庫斯科</a></li>
+          <li><a class="nav-link is-active" href="about.html" aria-current="page">關於</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 頁面標題區 ===== -->
+    <section class="hero hero--page">
+      <img class="hero-media" src="images/index-hero.jpg" alt="書桌上攤開的地圖、筆記本與相機" width="1600" height="900">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">關於本站</p>
+        <h1 class="hero-title">旅圖誌 Travel Atlas</h1>
+        <p class="hero-meta">網頁設計課程習作｜學員編號 16｜ChowYiuWah</p>
+      </div>
+    </section>
+
+    <!-- ===== 網站介紹 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">這個網站是什麼</h2>
+        <div class="prose">
+          <p>「旅圖誌」是一個旅遊資訊網站，精選四個來自不同國家的旅遊地點：日本京都、意大利羅馬、埃及開羅與秘魯庫斯科。每個地點都整理了歷史背景、文化特色、四個必去景點，以及旅行者真正用得著的實用資料，例如最佳季節、貨幣、語言、交通與簽證提示。</p>
+          <p>我們相信一趟好的旅行始於出發前的理解。知道一座城市為什麼長成今天的樣子，走在它的街道上就會看到完全不同的東西。如果你已經有心水，可以先去「目的地」頁比較四個地方，再進入詳細介紹。</p>
+          <p>本站以純 HTML、CSS 與 JavaScript 手寫完成，沒有使用任何前端框架或外部資源，並採用響應式設計，手機、平板與桌面都可以正常瀏覽。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 聯絡表單 ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">聯絡我們</h2>
+        <p class="section-lead">有任何意見或想補充的資料，歡迎填寫下面的表單。欄位會在輸入時即時驗證。</p>
+
+        <!-- novalidate：交由 JavaScript 做驗證，以便顯示自訂的中文錯誤訊息 -->
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-field">
+            <label class="form-label" for="contact-name">姓名 <span class="form-required" aria-hidden="true">*</span></label>
+            <input class="form-input" id="contact-name" name="name" type="text" autocomplete="name" aria-invalid="false" aria-describedby="contact-name-error" placeholder="例如：陳大文">
+            <p class="field-error" id="contact-name-error" hidden></p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="contact-email">電郵地址 <span class="form-required" aria-hidden="true">*</span></label>
+            <input class="form-input" id="contact-email" name="email" type="email" autocomplete="email" aria-invalid="false" aria-describedby="contact-email-error" placeholder="例如：traveler@example.com">
+            <p class="field-error" id="contact-email-error" hidden></p>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="contact-message">訊息內容 <span class="form-required" aria-hidden="true">*</span></label>
+            <textarea class="form-textarea" id="contact-message" name="message" rows="6" aria-invalid="false" aria-describedby="contact-message-error" placeholder="請至少輸入 10 個字，告訴我們你的想法。"></textarea>
+            <p class="field-error" id="contact-message-error" hidden></p>
+          </div>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+
+          <button class="btn btn--primary" type="submit">送出訊息</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== 常見問題 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">常見問題</h2>
+        <p class="section-lead">點擊問題就可以展開答案。</p>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>這個網站的資料從哪裡來？</summary>
+            <div class="faq-answer">
+              <p>內容整理自公開的旅遊資訊、各地官方旅遊局與博物館網站，再重新編寫成中文。資料以介紹及參考為目的，並非官方公告。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>為什麼只介紹四個地點？</summary>
+            <div class="faq-answer">
+              <p>課程要求介紹四個來自不同國家的旅遊地點。與其蜻蜓點水介紹二十個城市，我們選擇把四個地方寫得足夠深入，包括歷史、文化、景點與實用資料。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>網站上的圖片是真實照片嗎？</summary>
+            <div class="faq-answer">
+              <p>目前顯示的是暫代用的示意圖，只用來呈現版面效果。正式版本會換成實拍照片，更換方式可參考專案內的 README 檔案，裡面列出了每張圖片的檔名、建議內容與建議尺寸。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>為甚麼沒有訂票或訂房功能？</summary>
+            <div class="faq-answer">
+              <p>本站是純前端的課堂習作，沒有後端伺服器與資料庫，因此只提供旅遊資訊，不會處理任何交易或個人資料。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>我填了聯絡表單，你們會回覆嗎？</summary>
+            <div class="faq-answer">
+              <p>不會。表單只用來示範 JavaScript 的前端驗證，按下送出後資料不會傳送到任何地方，重新載入頁面就會消失。請勿在表單中輸入任何真實的個人資料。</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>簽證與安全提示可以直接照跟嗎？</summary>
+            <div class="faq-answer">
+              <p>不建議。各國的簽證政策、入境要求與安全狀況會隨時變動，出發前請務必查閱目的地官方領事館或入境部門的最新公告。</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 頁尾 ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">旅圖誌 Travel Atlas</p>
+        <p class="footer-text">四個國度、四段文明。本站為網頁設計課程習作，內容整理自公開旅遊資訊，只供學習與旅遊參考。</p>
+        <ul class="footer-nav">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="destinations.html">目的地</a></li>
+          <li><a href="kyoto.html">京都</a></li>
+          <li><a href="rome.html">羅馬</a></li>
+          <li><a href="cairo.html">開羅</a></li>
+          <li><a href="cusco.html">庫斯科</a></li>
+          <li><a href="about.html">關於</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-brand">製作資料</p>
+        <p class="footer-text">學員編號：16<br>姓名：ChowYiuWah<br>課程：網頁設計</p>
+      </div>
+      <p class="footer-disclaimer">&copy; 2026 旅圖誌 Travel Atlas。本站圖片為暫代用的示意圖，影片以 YouTube 官方嵌入方式提供，版權均屬原作者所有。旅遊資訊（尤其是簽證與安全提示）會隨時間變動，出發前請以官方最新公告為準。</p>
+    </div>
+  </footer>
+
+  <!-- 返回頂部按鈕 -->
+  <button class="back-to-top" id="back-to-top" type="button" hidden>
+    <span aria-hidden="true">&uarr;</span>
+    <span class="visually-hidden">返回頁面頂部</span>
+  </button>
+
+</body>
+</html>

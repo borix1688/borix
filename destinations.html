@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="比較日本京都、意大利羅馬、埃及開羅、秘魯庫斯科四個旅遊地點的國家、最佳季節、貨幣、語言與簽證安全提示，並可用篩選與排序快速找出適合你的目的地。">
+  <title>目的地總覽｜旅圖誌 Travel Atlas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== 頁首：標誌與主導覽列 ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">旅</span>
+        <span class="logo-text">旅圖誌<span class="logo-sub">TRAVEL ATLAS</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="開啟或收起主導覽列">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="主導覽列">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">首頁</a></li>
+          <li><a class="nav-link is-active" href="destinations.html" aria-current="page">目的地</a></li>
+          <li><a class="nav-link" href="kyoto.html">京都</a></li>
+          <li><a class="nav-link" href="rome.html">羅馬</a></li>
+          <li><a class="nav-link" href="cairo.html">開羅</a></li>
+          <li><a class="nav-link" href="cusco.html">庫斯科</a></li>
+          <li><a class="nav-link" href="about.html">關於</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== 頁面標題區 ===== -->
+    <section class="hero hero--page">
+      <img class="hero-media" src="images/index-hero.jpg" alt="攤開的旅遊地圖與指南針，象徵規劃旅程" width="1600" height="900">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">目的地總覽</p>
+        <h1 class="hero-title">四個地點，四個國家</h1>
+        <p class="hero-meta">日本京都｜意大利羅馬｜埃及開羅｜秘魯庫斯科</p>
+      </div>
+    </section>
+
+    <!-- ===== 篩選、排序與地點卡片 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">揀一個適合你的地方</h2>
+        <p class="section-lead">可以按國家或最佳季節篩選，也可以改變排序方式。下面的對比表會跟住一齊更新。</p>
+
+        <!-- 篩選與排序工具列 -->
+        <div class="filter-bar">
+          <div class="filter-field">
+            <label class="filter-label" for="filter-country">按國家篩選</label>
+            <select class="select" id="filter-country" name="country">
+              <option value="all">全部國家</option>
+              <option value="日本">日本</option>
+              <option value="意大利">意大利</option>
+              <option value="埃及">埃及</option>
+              <option value="秘魯">秘魯</option>
+            </select>
+          </div>
+
+          <div class="filter-field">
+            <label class="filter-label" for="filter-season">按最佳季節篩選</label>
+            <select class="select" id="filter-season" name="season">
+              <option value="all">全部季節</option>
+              <option value="春季">春季</option>
+              <option value="秋季">秋季</option>
+              <option value="冬季">冬季</option>
+            </select>
+          </div>
+
+          <div class="filter-field">
+            <label class="filter-label" for="sort-by">排序方式</label>
+            <select class="select" id="sort-by" name="sort">
+              <option value="default">預設排序</option>
+              <option value="name">地點名稱 A 至 Z</option>
+              <option value="country">國家 A 至 Z</option>
+              <option value="season">最佳季節</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 篩選結果計數，JavaScript 會即時更新 -->
+        <p class="filter-status" id="filter-status" role="status" aria-live="polite">顯示 <strong>4</strong> / 4 個地點</p>
+
+        <!-- 四個地點的總覽卡片，data-* 屬性供 JavaScript 篩選及排序使用 -->
+        <div class="card-grid" data-destination-grid>
+
+          <article class="card" data-destination="kyoto" data-country="日本" data-country-en="Japan" data-season="春季" data-season-order="1" data-name-en="Kyoto">
+            <a class="card-link" href="kyoto.html">
+              <div class="card-media">
+                <img class="card-img" src="images/index-card-kyoto.jpg" alt="京都的傳統木造街道與寺院屋簷" width="800" height="600">
+              </div>
+              <div class="card-body">
+                <p class="card-eyebrow">日本 JAPAN</p>
+                <h3 class="card-title">京都 Kyoto</h3>
+                <p class="card-text">千年古都，十七處世界文化遺產，春櫻秋楓最著名。</p>
+                <span class="card-cta">查看詳細介紹</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card" data-destination="rome" data-country="意大利" data-country-en="Italy" data-season="秋季" data-season-order="2" data-name-en="Rome">
+            <a class="card-link" href="rome.html">
+              <div class="card-media">
+                <img class="card-img" src="images/index-card-rome.jpg" alt="羅馬競技場的古老石造外牆" width="800" height="600">
+              </div>
+              <div class="card-body">
+                <p class="card-eyebrow">意大利 ITALY</p>
+                <h3 class="card-title">羅馬 Rome</h3>
+                <p class="card-text">古羅馬帝國的心臟，遺跡、廣場與噴泉密度極高。</p>
+                <span class="card-cta">查看詳細介紹</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card" data-destination="cairo" data-country="埃及" data-country-en="Egypt" data-season="冬季" data-season-order="3" data-name-en="Cairo">
+            <a class="card-link" href="cairo.html">
+              <div class="card-media">
+                <img class="card-img" src="images/index-card-cairo.jpg" alt="開羅市郊的吉薩金字塔與沙漠" width="800" height="600">
+              </div>
+              <div class="card-body">
+                <p class="card-eyebrow">埃及 EGYPT</p>
+                <h3 class="card-title">開羅 Cairo</h3>
+                <p class="card-text">金字塔與伊斯蘭古城並存，被稱為千塔之城。</p>
+                <span class="card-cta">查看詳細介紹</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card" data-destination="cusco" data-country="秘魯" data-country-en="Peru" data-season="冬季" data-season-order="3" data-name-en="Cusco">
+            <a class="card-link" href="cusco.html">
+              <div class="card-media">
+                <img class="card-img" src="images/index-card-cusco.jpg" alt="庫斯科古城的紅瓦屋頂與安地斯山脈" width="800" height="600">
+              </div>
+              <div class="card-body">
+                <p class="card-eyebrow">秘魯 PERU</p>
+                <h3 class="card-title">庫斯科 Cusco</h3>
+                <p class="card-text">印加帝國首都，海拔三千四百米，馬丘比丘的起點。</p>
+                <span class="card-cta">查看詳細介紹</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- 篩選後一個地點都沒有時才顯示 -->
+        <p class="empty-state" id="empty-state" hidden>沒有符合條件的地點</p>
+      </div>
+    </section>
+
+    <!-- ===== 四地對比表 ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">四地實用資料對比</h2>
+        <p class="section-lead">出發前最常問的幾個問題，一次過排在同一張表。手機版可以左右滑動表格。</p>
+
+        <div class="table-wrap">
+          <table class="comparison-table" data-comparison-table>
+            <caption>日本京都、意大利羅馬、埃及開羅、秘魯庫斯科旅遊實用資料對比</caption>
+            <thead>
+              <tr>
+                <th scope="col">地點</th>
+                <th scope="col">國家</th>
+                <th scope="col">最佳季節</th>
+                <th scope="col">貨幣</th>
+                <th scope="col">語言</th>
+                <th scope="col">簽證與安全提示</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-destination="kyoto">
+                <th scope="row">京都 Kyoto</th>
+                <td>日本</td>
+                <td>春季（3 至 5 月）</td>
+                <td>日圓 JPY（&yen;）</td>
+                <td>日語</td>
+                <td>香港特區護照免簽證停留 90 日。治安良好，但要留意地震與颱風消息，寺社多於下午五時前關門。</td>
+              </tr>
+              <tr data-destination="rome">
+                <th scope="row">羅馬 Rome</th>
+                <td>意大利</td>
+                <td>秋季（9 至 10 月）</td>
+                <td>歐元 EUR（&euro;）</td>
+                <td>意大利語</td>
+                <td>香港特區護照可免簽證停留神根區 180 日內最多 90 日。熱門景點與地鐵要提防扒手，進入教堂需遮蓋肩膝。</td>
+              </tr>
+              <tr data-destination="cairo">
+                <th scope="row">開羅 Cairo</th>
+                <td>埃及</td>
+                <td>冬季（11 至 2 月）</td>
+                <td>埃及鎊 EGP（E&pound;）</td>
+                <td>阿拉伯語（埃及方言）</td>
+                <td>香港特區護照需預先辦妥簽證，可經官方 e-Visa 網站申請或於指定口岸辦落地簽。只飲瓶裝水，避免夜間單獨行動，女性旅客宜衣著保守。</td>
+              </tr>
+              <tr data-destination="cusco">
+                <th scope="row">庫斯科 Cusco</th>
+                <td>秘魯</td>
+                <td>冬季（5 至 9 月旱季）</td>
+                <td>秘魯索爾 PEN（S/）</td>
+                <td>西班牙語、克丘亞語</td>
+                <td>香港特區護照可免簽證入境，停留日數以領事館最新公告為準。海拔約 3,400 米，首兩日要慢行以防高山症。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 頁尾 ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">旅圖誌 Travel Atlas</p>
+        <p class="footer-text">四個國度、四段文明。本站為網頁設計課程習作，內容整理自公開旅遊資訊，只供學習與旅遊參考。</p>
+        <ul class="footer-nav">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="destinations.html">目的地</a></li>
+          <li><a href="kyoto.html">京都</a></li>
+          <li><a href="rome.html">羅馬</a></li>
+          <li><a href="cairo.html">開羅</a></li>
+          <li><a href="cusco.html">庫斯科</a></li>
+          <li><a href="about.html">關於</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-brand">製作資料</p>
+        <p class="footer-text">學員編號：16<br>姓名：ChowYiuWah<br>課程：網頁設計</p>
+      </div>
+      <p class="footer-disclaimer">&copy; 2026 旅圖誌 Travel Atlas。本站圖片為暫代用的示意圖，影片以 YouTube 官方嵌入方式提供，版權均屬原作者所有。旅遊資訊（尤其是簽證與安全提示）會隨時間變動，出發前請以官方最新公告為準。</p>
+    </div>
+  </footer>
+
+  <!-- 返回頂部按鈕 -->
+  <button class="back-to-top" id="back-to-top" type="button" hidden>
+    <span aria-hidden="true">&uarr;</span>
+    <span class="visually-hidden">返回頁面頂部</span>
+  </button>
+
+</body>
+</html>

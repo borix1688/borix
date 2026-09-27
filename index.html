@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="旅圖誌：介紹日本京都、意大利羅馬、埃及開羅、秘魯庫斯科四個不同國家的旅遊地點，包含歷史、文化、景點與實用旅遊資料。">
+  <title>旅圖誌 Travel Atlas｜四個國度，四段文明</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== 頁首：標誌與主導覽列 ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">旅</span>
+        <span class="logo-text">旅圖誌<span class="logo-sub">TRAVEL ATLAS</span></span>
+      </a>
+
+      <!-- 手機版漢堡按鈕，平板以上由 CSS 隱藏 -->
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="開啟或收起主導覽列">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="主導覽列">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="index.html" aria-current="page">首頁</a></li>
+          <li><a class="nav-link" href="destinations.html">目的地</a></li>
+          <li><a class="nav-link" href="kyoto.html">京都</a></li>
+          <li><a class="nav-link" href="rome.html">羅馬</a></li>
+          <li><a class="nav-link" href="cairo.html">開羅</a></li>
+          <li><a class="nav-link" href="cusco.html">庫斯科</a></li>
+          <li><a class="nav-link" href="about.html">關於</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero 大圖區 ===== -->
+    <section class="hero hero--home">
+      <img class="hero-media" src="images/index-hero.jpg" alt="旅程出發前攤開的地圖、相機與筆記本" width="1600" height="900">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">旅遊資訊網站</p>
+        <h1 class="hero-title">四個國度，四段文明</h1>
+        <p class="hero-lead">由日本的千年古都，到意大利的帝國遺跡；由埃及的沙漠金字塔，到秘魯的安地斯山城。揀一個地方，開始你的下一段旅程。</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="destinations.html">探索四個目的地</a>
+          <a class="btn btn--ghost" href="about.html">關於本站</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 精選目的地卡片 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">精選目的地</h2>
+        <p class="section-lead">四個地點、四個國家，各有完全不同的歷史脈絡與生活節奏。</p>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <a class="card-link" href="kyoto.html">
+              <div class="card-media">
+                <img class="card-img" src="images/index-card-kyoto.jpg" alt="京都的傳統木造街道與寺院屋簷" width="800" height="600">
+              </div>
+              <div class="card-body">
+                <p class="card-eyebrow">日本 JAPAN</p>
+                <h3 class="card-title">京都 Kyoto</h3>
+                <p class="card-text">千年古都，寺社庭園與町家小巷交織，是日本傳統文化的核心。</p>
+                <span class="card-cta">查看詳細介紹</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a class="card-link" href="rome.html">
+              <div class="card-media">
+                <img class="card-img" src="images/index-card-rome.jpg" alt="羅馬競技場的古老石造外牆" width="800" height="600">
+              </div>
+              <div class="card-body">
+                <p class="card-eyebrow">意大利 ITALY</p>
+                <h3 class="card-title">羅馬 Rome</h3>
+                <p class="card-text">西方文明的搖籃，古羅馬遺跡與巴洛克廣場在同一個街角相遇。</p>
+                <span class="card-cta">查看詳細介紹</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a class="card-link" href="cairo.html">
+              <div class="card-media">
+                <img class="card-img" src="images/index-card-cairo.jpg" alt="開羅市郊的吉薩金字塔與沙漠" width="800" height="600">
+              </div>
+              <div class="card-body">
+                <p class="card-eyebrow">埃及 EGYPT</p>
+                <h3 class="card-title">開羅 Cairo</h3>
+                <p class="card-text">非洲最大的城市之一，金字塔與伊斯蘭古城並存，被稱為千塔之城。</p>
+                <span class="card-cta">查看詳細介紹</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a class="card-link" href="cusco.html">
+              <div class="card-media">
+                <img class="card-img" src="images/index-card-cusco.jpg" alt="庫斯科古城的紅瓦屋頂與安地斯山脈" width="800" height="600">
+              </div>
+              <div class="card-body">
+                <p class="card-eyebrow">秘魯 PERU</p>
+                <h3 class="card-title">庫斯科 Cusco</h3>
+                <p class="card-text">印加帝國的首都，海拔三千四百米，是前往馬丘比丘的起點。</p>
+                <span class="card-cta">查看詳細介紹</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 網站簡介 ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">關於這個網站</h2>
+        <div class="prose">
+          <p>「旅圖誌」是一個旅遊資訊網站，精選四個來自不同國家的旅遊地點，每個地方都整理了歷史背景、文化特色、必去景點，以及旅行者真正用得著的實用資料，例如最佳季節、貨幣、語言、交通與簽證提示。</p>
+          <p>我們相信一趟好的旅行，始於出發前的理解。知道一座城市為什麼長成今天的樣子，走在它的街道上就會看到完全不同的東西。如果你已經有心水，可以直接去「目的地」頁比較四個地方，再進入詳細介紹。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 旅遊影片 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">旅遊影片精選</h2>
+        <p class="section-lead">先看一段環遊世界的影片熱身，再揀你想去的地方。</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/BpITZk7sa8E" title="旅遊影片：環遊世界 4K 美景合輯" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 頁尾 ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">旅圖誌 Travel Atlas</p>
+        <p class="footer-text">四個國度、四段文明。本站為網頁設計課程習作，內容整理自公開旅遊資訊，只供學習與旅遊參考。</p>
+        <ul class="footer-nav">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="destinations.html">目的地</a></li>
+          <li><a href="kyoto.html">京都</a></li>
+          <li><a href="rome.html">羅馬</a></li>
+          <li><a href="cairo.html">開羅</a></li>
+          <li><a href="cusco.html">庫斯科</a></li>
+          <li><a href="about.html">關於</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-brand">製作資料</p>
+        <p class="footer-text">學員編號：16<br>姓名：ChowYiuWah<br>課程：網頁設計</p>
+      </div>
+      <p class="footer-disclaimer">&copy; 2026 旅圖誌 Travel Atlas。本站圖片為暫代用的示意圖，影片以 YouTube 官方嵌入方式提供，版權均屬原作者所有。旅遊資訊（尤其是簽證與安全提示）會隨時間變動，出發前請以官方最新公告為準。</p>
+    </div>
+  </footer>
+
+  <!-- 返回頂部按鈕（全站每頁都有，捲動後才出現） -->
+  <button class="back-to-top" id="back-to-top" type="button" hidden>
+    <span aria-hidden="true">&uarr;</span>
+    <span class="visually-hidden">返回頁面頂部</span>
+  </button>
+
+
+
+</body>
+</html>
